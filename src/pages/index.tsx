@@ -21,11 +21,20 @@ import {
 import Image from "next/image";
 import dev from "../../public/dev-wave.png";
 import design from "../../public/design.png";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function Home() {
   const [darkMode, setDarkMode] = useState(false);
   // https://www.npmjs.com/package/react-image-gallery
+  useEffect(() => {
+    console.log("oi")
+    window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", (event) => {
+      const colorScheme = event.matches ? true : false;
+      console.log(event.matches); // "dark" or "light"
+      setDarkMode(colorScheme);
+    });
+  }, []);
+
   return (
     <div className={darkMode ? "dark" : ""}>
       <Head>
@@ -38,17 +47,26 @@ export default function Home() {
         <h1 className="text-2xl text-yellow-400">Portfólio</h1>
         <ul className="flex items-center gap-2">
           <li>
-            <a className="text-white font-thin hidden md:flex" href="#dados">
+            <a
+              className="text-white font-thin hidden md:flex transition-all hover:scale-110 hover:text-yellow-400"
+              href="#dados"
+            >
               Dados
             </a>
           </li>
           <li>
-            <a className="text-white font-thin hidden md:flex" href="#competencias">
+            <a
+              className="text-white font-thin hidden md:flex transition-all hover:scale-110 hover:text-yellow-400"
+              href="#competencias"
+            >
               Competências
             </a>
           </li>
           <li>
-            <a className="text-white font-thin hidden md:flex" href="#portfolio">
+            <a
+              className="text-white font-thin hidden md:flex transition-all hover:scale-110 hover:text-yellow-400"
+              href="#portfolio"
+            >
               Portfolio
             </a>
           </li>
@@ -60,7 +78,7 @@ export default function Home() {
           </li>
           <li>
             <a
-              className="bg-gradient-to-r from-blue-400 to-blue-700 text-white px-4 py-2 rounded-md ml-8"
+              className="bg-gradient-to-r from-blue-400 to-blue-700 text-white px-4 py-2 rounded-md ml-8 transition-all hover:drop-shadow-[0_5px_15px_#c0df14b2]"
               href="/Curriculo_Gabriel_Jose.pdf"
               download
             >
@@ -82,35 +100,40 @@ export default function Home() {
           <div className="text-5xl flex flex-wrap justify-center gap-16 py-3 text-gray-600">
             <a
               href="https://twitter.com/Josehehehehe"
-              target="_blank" rel="noreferrer"
+              target="_blank"
+              rel="noreferrer"
               className="transition duration-500 hover:scale-125 hover:text-blue-800"
             >
               <AiFillTwitterCircle />
             </a>
             <a
               href="https://github.com/gabrielJGS"
-              target="_blank" rel="noreferrer"
+              target="_blank"
+              rel="noreferrer"
               className="transition duration-500 hover:scale-125 hover:text-blue-800"
             >
               <AiOutlineGithub />
             </a>
             <a
               href="https://blog.gabrieljs.online/"
-              target="_blank" rel="noreferrer"
+              target="_blank"
+              rel="noreferrer"
               className="transition duration-500 hover:scale-125 hover:text-blue-800"
             >
               <SiGhost />
             </a>
             <a
               href="https://www.linkedin.com/in/gabrieljs/"
-              target="_blank" rel="noreferrer"
+              target="_blank"
+              rel="noreferrer"
               className="transition duration-500 hover:scale-125 hover:text-blue-800"
             >
               <AiFillLinkedin />
             </a>
             <a
               href="https://play.google.com/store/apps/developer?id=Gabriel+Jos%C3%A9+Guedes+da+Silva"
-              target="_blank" rel="noreferrer"
+              target="_blank"
+              rel="noreferrer"
               className="transition duration-500 hover:scale-125 hover:text-blue-800"
             >
               <AiFillGoogleCircle />
