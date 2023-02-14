@@ -22,7 +22,7 @@ import {
 import ImageGallery from "react-image-gallery";
 
 import Image from "next/image";
-import dev from "../../public/dev-wave.png";
+import dev from "../../public/avatar.png";
 import { useState } from "react";
 
 export default function Home() {
