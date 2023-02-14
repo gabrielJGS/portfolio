@@ -239,8 +239,8 @@ export default function Home() {
               <h3 className="text-lg font-medium pt-2 pb-1 text-zinc-800 dark:text-blue-400">Docker</h3>
             </div>
             <div className="text-center shadow-lg p-6 rounded-tl-xl my-4 bg-gray-100 dark:bg-slate-800 transition duration-500 hover:scale-125">
-              <DiGit width={100} height={100} className="text-[80px] mx-auto text-orange-600 rounded-xl" />
-              <h3 className="text-lg font-medium pt-2 pb-1 text-zinc-800 dark:text-orange-600">Git</h3>
+              <DiGit width={100} height={100} className="text-[80px] mx-auto text-red-600 rounded-xl" />
+              <h3 className="text-lg font-medium pt-2 pb-1 text-zinc-800 dark:text-red-600">Git</h3>
             </div>
             <div className="text-center shadow-lg p-6 rounded-tl-xl my-4 bg-gray-100 dark:bg-slate-800 transition duration-500 hover:scale-125">
               <SiPhp width={100} height={100} className="text-[80px] mx-auto text-blue-400 rounded-xl" />
