@@ -21,12 +21,10 @@ import ImageGallery from "react-image-gallery";
 
 import Image from "next/image";
 import dev from "../../public/dev-wave.png";
-import design from "../../public/design.png";
 import { useState } from "react";
 
 export default function Home() {
-  const [darkMode, setDarkMode] = useState(false);
-  // https://www.npmjs.com/package/react-image-gallery
+  const [darkMode, setDarkMode] = useState(true);
   const projetoEsclarecaImgs = [
     {
       original: "https://picsum.photos/id/1018/1000/600/",
