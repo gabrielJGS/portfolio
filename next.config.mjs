@@ -5,6 +5,7 @@ const isProd = process.env.NODE_ENV === 'production'
 
 const nextConfig = {
   images: {
+    unoptimized: true,
     loader: "akamai",
     path: isProd ? 'https://gabrieljs.online' : "/",
     // formats: ["image/avif", "image/webp"],
@@ -23,7 +24,7 @@ const nextConfig = {
     //   }
     // ],
   },
-  assetPrefix: isProd ? 'https://gabrieljs.online' : undefined,
+  assetPrefix: isProd ? 'https://gabrieljs.online' : "http://localhost:3000",
 };
 
 export default nextConfig;
