@@ -17,23 +17,30 @@ import {
   SiTailwindcss,
   SiTypescript,
 } from "react-icons/si";
+import ImageGallery from "react-image-gallery";
 
 import Image from "next/image";
 import dev from "../../public/dev-wave.png";
 import design from "../../public/design.png";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 export default function Home() {
   const [darkMode, setDarkMode] = useState(false);
   // https://www.npmjs.com/package/react-image-gallery
-  useEffect(() => {
-    console.log("oi")
-    window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", (event) => {
-      const colorScheme = event.matches ? true : false;
-      console.log(event.matches); // "dark" or "light"
-      setDarkMode(colorScheme);
-    });
-  }, []);
+  const projetoEsclarecaImgs = [
+    {
+      original: "https://picsum.photos/id/1018/1000/600/",
+      thumbnail: "https://picsum.photos/id/1018/250/150/",
+    },
+    {
+      original: "https://picsum.photos/id/1015/1000/600/",
+      thumbnail: "https://picsum.photos/id/1015/250/150/",
+    },
+    {
+      original: "https://picsum.photos/id/1019/1000/600/",
+      thumbnail: "https://picsum.photos/id/1019/250/150/",
+    },
+  ];
 
   return (
     <div className={darkMode ? "dark" : ""}>
@@ -245,54 +252,23 @@ export default function Home() {
               {/* <span className="text-teal-500">Ciclano</span> Lorem dolor sit amet */}
             </p>
           </div>
+
           <div className="flex flex-col gap-10 py-10 lg:flex-row lg:flex-wrap">
             <div className="basis-1/3 flex-1">
-              <Image
-                src={design}
-                alt="Print do projeto X"
-                className="rounded-lg object-cover w-full h-full"
-                layout="responsive"
-              />
+              <ImageGallery items={projetoEsclarecaImgs} />
+              <h5 className="text-xl text-center pb-2 dark:text-white">Esclareça</h5>
+              <p className="text-md text-center py-1 px-4 leading-8 text-gray-700 dark:text-gray-400">
+                Texto de descrição do projeto            
+              </p>
             </div>
             <div className="basis-1/3 flex-1">
-              <Image
-                src={design}
-                alt="Print do projeto X"
-                className="rounded-lg object-cover w-full h-full"
-                layout="responsive"
-              />
+              <ImageGallery items={projetoEsclarecaImgs} />
             </div>
             <div className="basis-1/3 flex-1">
-              <Image
-                src={design}
-                alt="Print do projeto X"
-                className="rounded-lg object-cover w-full h-full"
-                layout="responsive"
-              />
+              <ImageGallery items={projetoEsclarecaImgs} />
             </div>
             <div className="basis-1/3 flex-1">
-              <Image
-                src={design}
-                alt="Print do projeto X"
-                className="rounded-lg object-cover w-full h-full"
-                layout="responsive"
-              />
-            </div>
-            <div className="basis-1/3 flex-1">
-              <Image
-                src={design}
-                alt="Print do projeto X"
-                className="rounded-lg object-cover w-full h-full"
-                layout="responsive"
-              />
-            </div>
-            <div className="basis-1/3 flex-1">
-              <Image
-                src={design}
-                alt="Print do projeto X"
-                className="rounded-lg object-cover w-full h-full"
-                layout="responsive"
-              />
+              <ImageGallery items={projetoEsclarecaImgs} />
             </div>
           </div>
         </section>
