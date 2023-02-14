@@ -7,10 +7,12 @@ import {
   SiDocker,
   SiExpress,
   SiGhost,
+  SiLaravel,
   SiLinux,
   SiMongodb,
   SiMysql,
   SiNextdotjs,
+  SiPhp,
   SiPostgresql,
   SiSqlite,
   SiStyledcomponents,
@@ -175,7 +177,7 @@ export default function Home() {
             </div>
             <div className="text-center shadow-lg p-6 rounded-tl-xl my-4 bg-gray-100 dark:bg-slate-800 transition duration-500 hover:scale-125">
               <SiExpress width={100} height={100} className="text-[80px] mx-auto text-green-500 rounded-xl" />
-              <h3 className="text-lg font-medium pt-2 pb-1 text-zinc-800 dark:text-yellow-500">Express.js</h3>
+              <h3 className="text-lg font-medium pt-2 pb-1 text-zinc-800 dark:text-green-500">Express.js</h3>
             </div>
             <div className="text-center shadow-lg p-6 rounded-tl-xl my-4 bg-gray-100 dark:bg-slate-800 transition duration-500 hover:scale-125">
               <DiReact width={100} height={100} className="text-[80px] mx-auto text-cyan-400 rounded-xl" />
@@ -239,6 +241,14 @@ export default function Home() {
             <div className="text-center shadow-lg p-6 rounded-tl-xl my-4 bg-gray-100 dark:bg-slate-800 transition duration-500 hover:scale-125">
               <DiGit width={100} height={100} className="text-[80px] mx-auto text-orange-600 rounded-xl" />
               <h3 className="text-lg font-medium pt-2 pb-1 text-zinc-800 dark:text-orange-600">Git</h3>
+            </div>
+            <div className="text-center shadow-lg p-6 rounded-tl-xl my-4 bg-gray-100 dark:bg-slate-800 transition duration-500 hover:scale-125">
+              <SiPhp width={100} height={100} className="text-[80px] mx-auto text-blue-400 rounded-xl" />
+              <h3 className="text-lg font-medium pt-2 pb-1 text-zinc-800 dark:text-blue-400">PHP</h3>
+            </div>
+            <div className="text-center shadow-lg p-6 rounded-tl-xl my-4 bg-gray-100 dark:bg-slate-800 transition duration-500 hover:scale-125">
+              <SiLaravel width={100} height={100} className="text-[80px] mx-auto text-orange-600 rounded-xl" />
+              <h3 className="text-lg font-medium pt-2 pb-1 text-zinc-800 dark:text-orange-600">Laravel</h3>
             </div>
           </div>
         </section>
