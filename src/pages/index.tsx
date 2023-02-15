@@ -336,11 +336,7 @@ export default function Home() {
               </p>
               <div className="flex flex-wrap gap-10 justify-center">
                 <SiReact width={20} height={20} className="text-[40px] mx-auto text-blue-500 rounded-xl" />
-                <SiRealm
-                  width={20}
-                  height={20}
-                  className="text-[40px] mx-auto text-purple-800"
-                />
+                <SiRealm width={20} height={20} className="text-[40px] mx-auto text-purple-800" />
               </div>
             </div>
             <div className="basis-1/4 p-4 flex-1 rounded-lg bg-white dark:bg-slate-800">
@@ -424,6 +420,23 @@ export default function Home() {
           </div>
         </section>
       </main>
+      <footer className="w-full px-10 py-5 flex justify-between bg-blue-800">
+        <h1 className="text-2xl text-yellow-400">
+          Portfólio by <span className="text-slate-100">Gabriel José</span>
+          <span> - {new Date().getFullYear()}</span>
+        </h1>
+        <ul className="flex items-center gap-2">
+          <li>
+            <SiReact width={20} height={20} className="text-[40px] mx-auto text-blue-500 rounded-xl" />
+          </li>
+          <li>
+            <SiNextdotjs width={20} height={20} className="text-[40px] mx-auto text-slate-400 rounded-xl" />
+          </li>
+          <li>
+            <SiTailwindcss width={20} height={20} className="text-[40px] mx-auto text-blue-400 rounded-xl" />
+          </li>
+        </ul>
+      </footer>
     </div>
   );
 }
