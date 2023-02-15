@@ -318,7 +318,7 @@ export default function Home() {
           <div className="flex flex-col gap-10 py-10 lg:flex-row lg:flex-wrap">
             <div className="basis-1/4 p-4 flex-1 rounded-lg bg-white dark:bg-slate-800">
               <ImageGallery items={projetoRecordar} showFullscreenButton />
-              <h5 className="text-xl font-bold text-center pb-2 dark:text-yellow-600">Esclareça</h5>
+              <h5 className="text-xl font-bold text-center pb-2 dark:text-yellow-600">Recordar</h5>
               <p className="text-md text-center py-1 px-4 leading-8 text-gray-700 dark:text-gray-400">
                 Tem dificuldade para decorar um novo número de telefone, aquela resposta longa de uma prova difícil ou o
                 aniversário de namoro? Este é o aplicativo que irá te ajudar... Simplesmente adicione um novo lembrete,
