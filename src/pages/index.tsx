@@ -32,7 +32,7 @@ import dev from "../../public/avatar.png";
 import { useState } from "react";
 
 export default function Home() {
-  const [darkMode, setDarkMode] = useState(true);
+  const [darkMode, setDarkMode] = useState(false);
   const projetoEsclarecaImgs = [
     {
       original: "https://user-images.githubusercontent.com/82184751/132075958-d5299a6b-062a-47bc-9522-c9e321615418.png",
