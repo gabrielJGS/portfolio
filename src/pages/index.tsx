@@ -29,6 +29,7 @@ import ImageGallery from "react-image-gallery";
 
 import Image from "next/image";
 import dev from "../../public/avatar.png";
+import logo from "../../public/logo.png";
 import { useState } from "react";
 
 export default function Home() {
@@ -98,8 +99,11 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/fav.ico" />
       </Head>
-      <nav className="w-full fixed px-10 py-5 flex justify-between bg-blue-800 z-50">
-        <h1 className="text-2xl text-yellow-400">Portfólio</h1>
+      <nav className="w-full fixed px-10 py-2 flex justify-between bg-blue-800 z-50">
+        <div className="flex w-full h-16 justify-start items-center">
+          <Image src={logo} alt={"Logo do portfólio"}  className="h-10 w-10"/>
+          <h1 className="m-2 text-2xl text-yellow-400">Portfólio</h1>
+        </div>
         <ul className="flex items-center gap-2">
           <li>
             <a
@@ -142,11 +146,11 @@ export default function Home() {
           </li>
         </ul>
       </nav>
-      <div className="w-full fixed z-40 bg-yellow-400 dark:bg-yellow-600" style={{ height: "74px" }}></div>
-      <main className="min-h-screen pt-10 px-10 md:px-20 lg:px-40 bg-slate-100 dark:bg-gray-900">
+      <div className="w-full fixed z-40 shadow-2xl dark:drop-shadow-[0_2px_10px_#c0df14b2] bg-yellow-400 dark:bg-yellow-600" style={{ height: "82px" }}></div>
+      <main className="min-h-screen pt-12 px-10 md:px-20 lg:px-40 bg-slate-100 dark:bg-gray-900">
         <section id="dados">
           <div className="text-center p-10">
-            <h2 className="text-5xl py-2 text-blue-800 font-medium md:text-6xl">Gabriel José</h2>
+            <h2 className="text-5xl py-2 text-blue-700 font-medium md:text-6xl">Gabriel José</h2>
             <h3 className="text-2xl py-2 md:text-3xl dark:text-yellow-400">Desenvolvedor FullStack</h3>
           </div>
           <div className="text-5xl flex flex-wrap justify-center gap-16 py-3 text-gray-600">
@@ -374,8 +378,8 @@ export default function Home() {
                   bot para o Twitter
                 </a>{" "}
                 para tradução de imagens. Um usuário pode marcar o robô em um post que contenha uma imagem e ele irá
-                &apos;extrair&apos; o texto da imagem, permitindo que copie o texto ou que um usuário cego consiga usar o leitor
-                por exemplo...
+                &apos;extrair&apos; o texto da imagem, permitindo que copie o texto ou que um usuário cego consiga usar
+                o leitor por exemplo...
                 <a
                   href="https://github.com/gabrielJGS/ImageTranslator"
                   target="_blank"
