@@ -147,13 +147,13 @@ export default function Home() {
         </ul>
       </nav>
       <div className="w-full fixed z-40 shadow-2xl dark:drop-shadow-[0_1px_4px_#c0df14b2] bg-yellow-400 dark:bg-yellow-600" style={{ height: "82px" }}></div>
-      <main className="min-h-screen pt-12 px-10 md:px-20 lg:px-40 bg-slate-100 dark:bg-gray-900">
+      <main className="min-h-screen pt-12 px-10 md:px-20 lg:px-40 bg-slate-100 transition duration-500 dark:bg-gray-900">
         <section id="dados">
           <div className="text-center p-10">
             <h2 className="text-5xl py-2 text-blue-700 font-medium md:text-6xl">Gabriel José</h2>
             <h3 className="text-2xl py-2 md:text-3xl dark:text-yellow-400">Desenvolvedor FullStack</h3>
           </div>
-          <div className="text-5xl flex flex-wrap justify-center gap-16 py-3 text-gray-600">
+          <div className="text-5xl flex flex-wrap justify-center gap-16 py-1 text-gray-600">
             <a
               href="https://twitter.com/Josehehehehe"
               target="_blank"
@@ -195,18 +195,18 @@ export default function Home() {
               <AiFillGoogleCircle />
             </a>
           </div>
-          <div className="relative mx-auto bg-gradient-to-b from-blue-800 rounded-full w-60 h-60 mt-20 overflow-hidden md:h-80 md:w-80">
+          <div className="relative mx-auto bg-gradient-to-b from-blue-800 rounded-full w-60 h-60 mt-10 overflow-hidden md:h-80 md:w-80">
             <Image src={dev} alt={"Avatar customizado do Gabriel"} fill style={{ objectFit: "cover" }} />
           </div>
         </section>
         <section id="competencias">
           <div>
-            <h3 className="text-3xl font-bold py-1 dark:text-yellow-500">Competências</h3>
+            <h3 className="text-3xl font-bold py-2 dark:text-yellow-500">Competências</h3>
             <p className="text-md py-2 leading-8 text-gray-800 dark:text-white">
               Hard Skills desenvolvidas atráves de cursos/webinars e projetos práticos
             </p>
           </div>
-          <div className="flex flex-wrap gap-10 justify-center">
+          <div className="flex flex-wrap gap-6 justify-center">
             <div className="text-center shadow-lg p-6 rounded-tl-xl my-4 bg-white dark:bg-slate-800 transition duration-500 hover:scale-125">
               <DiHtml5 width={100} height={100} className="text-[80px] mx-auto text-orange-500" />
               <h3 className="text-lg font-medium pt-2 pb-1 text-zinc-800 dark:text-orange-500">HTML5</h3>
