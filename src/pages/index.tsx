@@ -6,7 +6,10 @@ import {
   SiAmazonaws,
   SiDocker,
   SiExpress,
+  SiFlask,
   SiGhost,
+  SiGoogletranslate,
+  SiJson,
   SiLaravel,
   SiLinux,
   SiMongodb,
@@ -14,6 +17,9 @@ import {
   SiNextdotjs,
   SiPhp,
   SiPostgresql,
+  SiPython,
+  SiReact,
+  SiRealm,
   SiSqlite,
   SiStyledcomponents,
   SiTailwindcss,
@@ -45,6 +51,39 @@ export default function Home() {
     },
     {
       original: "https://user-images.githubusercontent.com/82184751/132076228-9f66acb1-c59d-4150-a649-e03c4132c04f.png",
+    },
+  ];
+  const projetoImgTranslator = [
+    {
+      original: "https://user-images.githubusercontent.com/82184751/132076655-45e9d1cc-f8c0-4f5d-a19f-dca33f97fcff.png",
+    },
+    {
+      original: "https://user-images.githubusercontent.com/82184751/132076643-7ed2cc44-ebab-49c6-91e1-abefc52493cc.png",
+    },
+    {
+      original: "https://user-images.githubusercontent.com/82184751/132076666-8cb704d0-41b5-4089-9339-0088050494a3.png",
+    },
+  ];
+  const projetoRecordar = [
+    {
+      original:
+        "https://play-lh.googleusercontent.com/d0ELPSkrCFE4AjeN5NTip_Pl58TUIS8lLYfDjwaxBG43zKwQI8zF-yd-SAlKwhMHHkw=w2560-h1440-rw",
+    },
+    {
+      original:
+        "https://play-lh.googleusercontent.com/qtW8ZJ6Aem96hsrC_23bReDwvWsf87XkmkBhsMzySVHFMNasytoXSRJ1c9q4U5UC8zA=w2560-h1440-rw",
+    },
+    {
+      original:
+        "https://play-lh.googleusercontent.com/6VNNxmQ4iDUEDiXTIvWtnrMVjasUgW_zs9oRKpE2FfkmCk2tcf7H6QHA73lEWPzjx3Q=w2560-h1440-rw",
+    },
+    {
+      original:
+        "https://play-lh.googleusercontent.com/uGM8KSqT4gLiX-dlpsjpQFWSf35O6yuadxCvLERuq4iz__srFr1uXqZWopGgxa1rd0A=w2560-h1440-rw",
+    },
+    {
+      original:
+        "https://play-lh.googleusercontent.com/KX5fb7izegUos3lFszmNnqzthNBqjccjTm0Air0j9_KjcrGohxtI2OvI9Agl-funj7Us=w2560-h1440-rw",
     },
   ];
 
@@ -185,11 +224,11 @@ export default function Home() {
               <h3 className="text-lg font-medium pt-2 pb-1 text-zinc-800 dark:text-green-500">Express.js</h3>
             </div>
             <div className="text-center shadow-lg p-6 rounded-tl-xl my-4 bg-white dark:bg-slate-800 transition duration-500 hover:scale-125">
-              <DiReact width={100} height={100} className="text-[80px] mx-auto text-cyan-400 rounded-xl" />
+              <SiReact width={100} height={100} className="text-[80px] mx-auto text-cyan-400 rounded-xl" />
               <h3 className="text-lg font-medium pt-2 pb-1 text-zinc-800 dark:text-cyan-400">React.js</h3>
             </div>
             <div className="text-center shadow-lg p-6 rounded-tl-xl my-4 bg-white dark:bg-slate-800 transition duration-500 hover:scale-125">
-              <DiReact width={100} height={100} className="text-[80px] mx-auto text-blue-500 rounded-xl" />
+              <SiReact width={100} height={100} className="text-[80px] mx-auto text-blue-500 rounded-xl" />
               <h3 className="text-lg font-medium pt-2 pb-1 text-zinc-800 dark:text-blue-500">
                 React
                 <br /> Native
@@ -255,6 +294,18 @@ export default function Home() {
               <SiLaravel width={100} height={100} className="text-[80px] mx-auto text-orange-600 rounded-xl" />
               <h3 className="text-lg font-medium pt-2 pb-1 text-zinc-800 dark:text-orange-600">Laravel</h3>
             </div>
+            <div className="text-center shadow-xl p-6 rounded-tl-xl my-4 bg-white dark:bg-slate-800 transition duration-500 hover:scale-125">
+              <SiPython width={100} height={100} className="text-[80px] mx-auto text-yellow-400 rounded-xl" />
+              <h3 className="text-lg font-medium pt-2 pb-1 text-zinc-800 dark:text-yellow-400">Python</h3>
+            </div>
+            <div className="text-center shadow-xl p-6 rounded-tl-xl my-4 bg-white dark:bg-slate-800 transition duration-500 hover:scale-125">
+              <SiFlask width={100} height={100} className="text-[80px] mx-auto text-slate-600 rounded-xl" />
+              <h3 className="text-lg font-medium pt-2 pb-1 text-zinc-800 dark:text-slate-600">Flask</h3>
+            </div>
+            <div className="text-center shadow-xl p-6 rounded-tl-xl my-4 bg-white dark:bg-slate-800 transition duration-500 hover:scale-125">
+              <SiJson width={100} height={100} className="text-[80px] mx-auto text-slate-600 rounded-xl" />
+              <h3 className="text-lg font-medium pt-2 pb-1 text-zinc-800 dark:text-slate-600">JSON</h3>
+            </div>
           </div>
         </section>
         <section id="projetos">
@@ -266,14 +317,39 @@ export default function Home() {
           </div>
           <div className="flex flex-col gap-10 py-10 lg:flex-row lg:flex-wrap">
             <div className="basis-1/4 p-4 flex-1 rounded-lg bg-white dark:bg-slate-800">
-              <ImageGallery items={projetoEsclarecaImgs} showFullscreenButton />
+              <ImageGallery items={projetoRecordar} showFullscreenButton />
               <h5 className="text-xl font-bold text-center pb-2 dark:text-yellow-600">Esclareça</h5>
               <p className="text-md text-center py-1 px-4 leading-8 text-gray-700 dark:text-gray-400">
-                O projeto é baseado em uma rede social focada para o estudo, de forma a ajudar na resolução de dúvidas e
-                compartilhamento de conteúdo. Ele foi elaborado como TCC de Gabriel José, Gabriel Lourenço e Reidner
-                Rocha para o término do curso de Sistemas de Informação no ano de 2020.
+                Tem dificuldade para decorar um novo número de telefone, aquela resposta longa de uma prova difícil ou o
+                aniversário de namoro? Este é o aplicativo que irá te ajudar... Simplesmente adicione um novo lembrete,
+                selecionando o período de tempo que você deseja ser lembrado, e caso você acerte, o app aumentará o
+                período, e o contador de acertos aumentará, incentivando sua memória!
                 <a
-                  href="https://github.com/gabrielJGS/esclarecaTcc"
+                  href="https://play.google.com/store/apps/details?id=com.gabrieljs.recordar"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-green-600 font-bold"
+                >
+                  {" "}
+                  Download
+                </a>
+              </p>
+              <div className="flex flex-wrap gap-10 justify-center">
+                <SiReact width={20} height={20} className="text-[40px] mx-auto text-blue-500 rounded-xl" />
+                <SiRealm
+                  width={20}
+                  height={20}
+                  className="text-[40px] mx-auto text-purple-800"
+                />
+              </div>
+            </div>
+            <div className="basis-1/4 p-4 flex-1 rounded-lg bg-white dark:bg-slate-800">
+              <h5 className="text-xl font-bold text-center pb-2 dark:text-yellow-600">E-Nota API</h5>
+              <p className="text-md text-center py-1 px-4 leading-8 text-gray-700 dark:text-gray-400">
+                Essa é uma API Python/Flask com o propósito de fazer o web-scraping dos conteúdos de uma Nota fiscal e
+                retornar via JSON
+                <a
+                  href="https://github.com/gabrielJGS/enota_api"
                   target="_blank"
                   rel="noreferrer"
                   className="text-blue-500 font-bold"
@@ -283,11 +359,41 @@ export default function Home() {
                 </a>
               </p>
               <div className="flex flex-wrap gap-10 justify-center">
-                <SiLinux width={20} height={20} className="text-[40px] mx-auto text-slate-500 rounded-xl" />
-                <SiAmazonaws width={20} height={20} className="text-[40px] mx-auto text-orange-500 rounded-xl" />
-                <DiNodejs width={20} height={20} className="text-[40px] mx-auto text-green-500 rounded-xl" />
-                <SiExpress width={20} height={20} className="text-[40px] mx-auto text-green-500 rounded-xl" />
-                <DiReact width={20} height={20} className="text-[40px] mx-auto text-blue-500 rounded-xl" />
+                <SiFlask width={20} height={20} className="text-[40px] mx-auto text-slate-600 rounded-xl" />
+                <SiPython width={20} height={20} className="text-[40px] mx-auto text-yellow-500" />
+                <SiJson width={20} height={20} className="text-[40px] mx-auto text-slate-600 rounded-xl" />
+              </div>
+            </div>
+            <div className="basis-1/4 p-4 flex-1 rounded-lg bg-white dark:bg-slate-800">
+              <ImageGallery items={projetoImgTranslator} showFullscreenButton />
+              <h5 className="text-xl font-bold text-center pb-2 dark:text-yellow-600">Twitter - Image Translator</h5>
+              <p className="text-md text-center py-1 px-4 leading-8 text-gray-700 dark:text-gray-400">
+                Um{" "}
+                <a
+                  href="https://twitter.com/translate_image"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-blue-500 font-bold"
+                >
+                  bot para o Twitter
+                </a>{" "}
+                para tradução de imagens. Um usuário pode marcar o robô em um post que contenha uma imagem e ele irá
+                "extrair" o texto da imagem, permitindo que copie o texto ou que um usuário cego consiga usar o leitor
+                por exemplo...
+                <a
+                  href="https://github.com/gabrielJGS/ImageTranslator"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-blue-500 font-bold"
+                >
+                  {" "}
+                  Repositório
+                </a>
+              </p>
+              <div className="flex flex-wrap gap-10 justify-center">
+                <AiFillTwitterCircle width={20} height={20} className="text-[40px] mx-auto text-blue-600" />
+                <SiPython width={20} height={20} className="text-[40px] mx-auto text-yellow-500" />
+                <SiGoogletranslate width={20} height={20} className="text-[40px] mx-auto text-blue-500" />
               </div>
             </div>
             <div className="basis-1/4 p-4 flex-1 rounded-lg bg-white dark:bg-slate-800">
@@ -312,7 +418,7 @@ export default function Home() {
                 <SiAmazonaws width={20} height={20} className="text-[40px] mx-auto text-orange-500 rounded-xl" />
                 <DiNodejs width={20} height={20} className="text-[40px] mx-auto text-green-500 rounded-xl" />
                 <SiExpress width={20} height={20} className="text-[40px] mx-auto text-green-500 rounded-xl" />
-                <DiReact width={20} height={20} className="text-[40px] mx-auto text-blue-500 rounded-xl" />
+                <SiReact width={20} height={20} className="text-[40px] mx-auto text-blue-500 rounded-xl" />
               </div>
             </div>
           </div>
