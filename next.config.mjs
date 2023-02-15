@@ -1,13 +1,13 @@
 /**
  * @type {import('next').NextConfig}
  */
-const isProd = process.env.NODE_ENV === 'production'
+const isProd = process.env.NODE_ENV === "production";
 
 const nextConfig = {
   images: {
-    unoptimized: true,
+    unoptimized: isProd ? false : true,
     loader: "akamai",
-    path: isProd ? 'https://gabrieljs.online' : "/",
+    path: isProd ? "https://gabrieljs.online" : "/",
     // formats: ["image/avif", "image/webp"],
     // remotePatterns: [
     //   {
@@ -24,7 +24,7 @@ const nextConfig = {
     //   }
     // ],
   },
-  assetPrefix: isProd ? 'https://gabrieljs.online' : "http://localhost:3000",
+  assetPrefix: isProd ? "https://gabrieljs.online" : "http://localhost:3000",
 };
 
 export default nextConfig;
