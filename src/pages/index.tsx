@@ -374,7 +374,7 @@ export default function Home() {
                   bot para o Twitter
                 </a>{" "}
                 para tradução de imagens. Um usuário pode marcar o robô em um post que contenha uma imagem e ele irá
-                "extrair" o texto da imagem, permitindo que copie o texto ou que um usuário cego consiga usar o leitor
+                &apos;extrair&apos; o texto da imagem, permitindo que copie o texto ou que um usuário cego consiga usar o leitor
                 por exemplo...
                 <a
                   href="https://github.com/gabrielJGS/ImageTranslator"
