@@ -30,10 +30,16 @@ import ImageGallery from "react-image-gallery";
 import Image from "next/image";
 import dev from "../../public/avatar.png";
 import logo from "../../public/logo.png";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function Home() {
   const [darkMode, setDarkMode] = useState(false);
+  useEffect(() => {
+    if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) {
+      setDarkMode(true);
+    }
+  }, []);
+
   const projetoEsclarecaImgs = [
     {
       original: "https://user-images.githubusercontent.com/82184751/132075958-d5299a6b-062a-47bc-9522-c9e321615418.png",
@@ -101,7 +107,7 @@ export default function Home() {
       </Head>
       <nav className="w-full fixed px-10 py-2 flex justify-between bg-blue-800 z-50">
         <div className="flex w-full h-16 justify-start items-center">
-          <Image src={logo} alt={"Logo do portfólio"}  className="h-10 w-10"/>
+          <Image src={logo} alt={"Logo do portfólio"} className="h-10 w-10" />
           <h1 className="m-2 text-2xl font-bold text-yellow-400">Portfólio</h1>
         </div>
         <ul className="flex items-center gap-2">
@@ -146,10 +152,13 @@ export default function Home() {
           </li>
         </ul>
       </nav>
-      <div className="w-full fixed z-40 shadow-2xl dark:drop-shadow-[0_1px_4px_#c0df14b2] bg-yellow-400 dark:bg-yellow-600" style={{ height: "82px" }}></div>
+      <div
+        className="w-full fixed z-40 shadow-2xl dark:drop-shadow-[0_1px_4px_#c0df14b2] bg-yellow-400 dark:bg-yellow-600"
+        style={{ height: "82px" }}
+      ></div>
       <main className="min-h-screen pt-12 px-10 md:px-20 lg:px-40 bg-slate-100 transition duration-500 dark:bg-gray-900">
         <section id="dados">
-          <div className="text-center p-10">
+          <div className="text-center p-10 mt-2">
             <h2 className="text-5xl py-2 text-blue-700 font-medium md:text-6xl">Gabriel José</h2>
             <h3 className="text-2xl py-2 md:text-3xl dark:text-yellow-400">Desenvolvedor FullStack</h3>
           </div>
