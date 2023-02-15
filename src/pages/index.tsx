@@ -426,8 +426,8 @@ export default function Home() {
       </main>
       <footer className="w-full px-10 py-5 flex justify-between bg-blue-800">
         <h1 className="text-2xl text-yellow-400">
-          Portfólio by <span className="text-slate-100">Gabriel José</span>
-          <span> - {new Date().getFullYear()}</span>
+          Portfólio by <span className="text-slate-100 font-bold">Gabriel José</span>
+          <span> - @{new Date().getFullYear()}</span>
         </h1>
         <ul className="flex items-center gap-2">
           <li>
