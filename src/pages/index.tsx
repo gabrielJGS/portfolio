@@ -102,7 +102,7 @@ export default function Home() {
       <nav className="w-full fixed px-10 py-2 flex justify-between bg-blue-800 z-50">
         <div className="flex w-full h-16 justify-start items-center">
           <Image src={logo} alt={"Logo do portfólio"}  className="h-10 w-10"/>
-          <h1 className="m-2 text-2xl text-yellow-400">Portfólio</h1>
+          <h1 className="m-2 text-2xl font-bold text-yellow-400">Portfólio</h1>
         </div>
         <ul className="flex items-center gap-2">
           <li>
@@ -146,7 +146,7 @@ export default function Home() {
           </li>
         </ul>
       </nav>
-      <div className="w-full fixed z-40 shadow-2xl dark:drop-shadow-[0_2px_10px_#c0df14b2] bg-yellow-400 dark:bg-yellow-600" style={{ height: "82px" }}></div>
+      <div className="w-full fixed z-40 shadow-2xl dark:drop-shadow-[0_1px_4px_#c0df14b2] bg-yellow-400 dark:bg-yellow-600" style={{ height: "82px" }}></div>
       <main className="min-h-screen pt-12 px-10 md:px-20 lg:px-40 bg-slate-100 dark:bg-gray-900">
         <section id="dados">
           <div className="text-center p-10">
