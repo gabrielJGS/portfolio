@@ -5,7 +5,7 @@ const isProd = process.env.NODE_ENV === "production";
 
 const nextConfig = {
   images: {
-    unoptimized: isProd ? false : true,
+    unoptimized: true,
     loader: "imgix",
     path: isProd ? "https://gabrieljs.online" : "/",
     // formats: ["image/avif", "image/webp"],
