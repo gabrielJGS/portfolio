@@ -2,8 +2,11 @@ import { BsMoonStarsFill } from "react-icons/bs";
 import Image from "next/image";
 import logo from "../../public/logo.png";
 
-export const Navbar = (props: any) => {
-  const darkMode = props.darkMode;
+interface NavbarProps {
+  darkMode: boolean;
+  changeDarkMode(): void;
+}
+export const Navbar = ({darkMode, changeDarkMode}: NavbarProps) => {
   return (
     <>
       <nav className="w-full fixed px-10 py-2 flex justify-between bg-blue-800 z-50">
@@ -39,7 +42,7 @@ export const Navbar = (props: any) => {
           <li>
             <BsMoonStarsFill
               className="cursor-pointer ml-4 text-2xl text-white dark:text-yellow-400 transition-all filter hover:scale-125 hover:drop-shadow-[7px_7px_2px_rgba(0,0,0,0.7)]"
-              onClick={props.changeDarkMode}
+              onClick={changeDarkMode}
             />
           </li>
           <li>
