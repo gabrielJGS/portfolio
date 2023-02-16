@@ -1,12 +1,11 @@
 import Head from "next/head";
-import { AiFillTwitterCircle, AiFillLinkedin, AiFillGoogleCircle, AiOutlineGithub } from "react-icons/ai";
-import { DiGit, DiHtml5, DiJsBadge, DiNodejs, DiReact } from "react-icons/di";
+import { AiFillTwitterCircle } from "react-icons/ai";
+import { DiGit, DiHtml5, DiJsBadge, DiNodejs } from "react-icons/di";
 import {
   SiAmazonaws,
   SiDocker,
   SiExpress,
   SiFlask,
-  SiGhost,
   SiGoogletranslate,
   SiJson,
   SiLaravel,
@@ -26,10 +25,9 @@ import {
 } from "react-icons/si";
 import ImageGallery from "react-image-gallery";
 
-import Image from "next/image";
-import dev from "../../public/avatar.png";
 import { useState, useEffect } from "react";
 import { Navbar } from "@/components/Navbar";
+import { Dados } from "@/components/Dados";
 
 export default function Home() {
   const [darkMode, setDarkMode] = useState(false);
@@ -110,57 +108,7 @@ export default function Home() {
       </Head>
       <Navbar darkMode changeDarkMode={changeDarkMode} />
       <main className="min-h-screen pt-12 px-10 md:px-20 lg:px-40 bg-slate-100 transition duration-500 dark:bg-gray-900">
-        <section id="dados">
-          <div className="text-center p-10 mt-2">
-            <h2 className="text-5xl py-2 text-blue-700 font-medium md:text-6xl">Gabriel José</h2>
-            <h3 className="text-2xl py-2 md:text-3xl dark:text-yellow-400">Desenvolvedor FullStack</h3>
-          </div>
-          <div className="text-5xl flex flex-wrap justify-center gap-16 py-1 text-gray-600">
-            <a
-              href="https://twitter.com/Josehehehehe"
-              target="_blank"
-              rel="noreferrer"
-              className="transition duration-500 hover:scale-125 hover:text-blue-800"
-            >
-              <AiFillTwitterCircle />
-            </a>
-            <a
-              href="https://github.com/gabrielJGS"
-              target="_blank"
-              rel="noreferrer"
-              className="transition duration-500 hover:scale-125 hover:text-blue-800"
-            >
-              <AiOutlineGithub />
-            </a>
-            <a
-              href="https://blog.gabrieljs.online/"
-              target="_blank"
-              rel="noreferrer"
-              className="transition duration-500 hover:scale-125 hover:text-blue-800"
-            >
-              <SiGhost />
-            </a>
-            <a
-              href="https://www.linkedin.com/in/gabrieljs/"
-              target="_blank"
-              rel="noreferrer"
-              className="transition duration-500 hover:scale-125 hover:text-blue-800"
-            >
-              <AiFillLinkedin />
-            </a>
-            <a
-              href="https://play.google.com/store/apps/developer?id=Gabriel+Jos%C3%A9+Guedes+da+Silva"
-              target="_blank"
-              rel="noreferrer"
-              className="transition duration-500 hover:scale-125 hover:text-blue-800"
-            >
-              <AiFillGoogleCircle />
-            </a>
-          </div>
-          <div className="relative mx-auto bg-gradient-to-b from-blue-800 rounded-full w-60 h-60 mt-10 overflow-hidden md:h-80 md:w-80">
-            <Image src={dev} alt={"Avatar customizado do Gabriel"} fill style={{ objectFit: "cover" }} />
-          </div>
-        </section>
+        <Dados />
         <section id="competencias">
           <div>
             <h3 className="text-3xl font-bold py-2 dark:text-yellow-500">Competências</h3>
