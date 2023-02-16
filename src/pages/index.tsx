@@ -1,5 +1,4 @@
 import Head from "next/head";
-import { BsMoonStarsFill } from "react-icons/bs";
 import { AiFillTwitterCircle, AiFillLinkedin, AiFillGoogleCircle, AiOutlineGithub } from "react-icons/ai";
 import { DiGit, DiHtml5, DiJsBadge, DiNodejs, DiReact } from "react-icons/di";
 import {
@@ -29,11 +28,15 @@ import ImageGallery from "react-image-gallery";
 
 import Image from "next/image";
 import dev from "../../public/avatar.png";
-import logo from "../../public/logo.png";
 import { useState, useEffect } from "react";
+import { Navbar } from "@/components/Navbar";
 
 export default function Home() {
   const [darkMode, setDarkMode] = useState(false);
+
+  function changeDarkMode() {
+    setDarkMode(!darkMode);
+  }
   useEffect(() => {
     if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) {
       setDarkMode(true);
@@ -105,57 +108,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/fav.ico" />
       </Head>
-      <nav className="w-full fixed px-10 py-2 flex justify-between bg-blue-800 z-50">
-        <div className="flex w-full h-16 justify-start items-center">
-          <Image src={logo} alt={"Logo do portfólio"} className="h-10 w-10" />
-          <h1 className="m-2 text-2xl font-bold text-yellow-400">Portfólio</h1>
-        </div>
-        <ul className="flex items-center gap-2">
-          <li>
-            <a
-              className="text-white font-thin hidden md:flex transition-all hover:scale-110 hover:text-yellow-400"
-              href="#dados"
-            >
-              Dados
-            </a>
-          </li>
-          <li>
-            <a
-              className="text-white font-thin hidden md:flex transition-all hover:scale-110 hover:text-yellow-400"
-              href="#competencias"
-            >
-              Competências
-            </a>
-          </li>
-          <li>
-            <a
-              className="text-white font-thin hidden md:flex transition-all hover:scale-110 hover:text-yellow-400"
-              href="#projetos"
-            >
-              Projetos
-            </a>
-          </li>
-          <li>
-            <BsMoonStarsFill
-              className="cursor-pointer ml-4 text-2xl text-white dark:text-yellow-400 transition-all filter hover:scale-125 hover:drop-shadow-[7px_7px_2px_rgba(0,0,0,0.7)]"
-              onClick={() => setDarkMode(!darkMode)}
-            />
-          </li>
-          <li>
-            <a
-              className="bg-gradient-to-r from-blue-400 to-blue-700 text-white px-4 py-2 rounded-md ml-8 transition-all hover:drop-shadow-[0_5px_15px_#c0df14b2]"
-              href="/Curriculo_Gabriel_Jose.pdf"
-              download
-            >
-              Currículo
-            </a>
-          </li>
-        </ul>
-      </nav>
-      <div
-        className="w-full fixed z-40 shadow-2xl dark:drop-shadow-[0_1px_4px_#c0df14b2] bg-yellow-400 dark:bg-yellow-600"
-        style={{ height: "82px" }}
-      ></div>
+      <Navbar darkMode changeDarkMode={changeDarkMode} />
       <main className="min-h-screen pt-12 px-10 md:px-20 lg:px-40 bg-slate-100 transition duration-500 dark:bg-gray-900">
         <section id="dados">
           <div className="text-center p-10 mt-2">
