@@ -12,7 +12,7 @@ import {
   SiReact,
   SiRealm,
 } from "react-icons/si";
-import { projetoRecordar, projetoEsclarecaImgs, projetoImgTranslator } from "../utils/projetosFotos";
+import { projetoRecordar, projetoEsclarecaImgs, projetoImgTranslator, projetoNlw2023 } from "../utils/projetosFotos";
 
 export const Projetos = () => {
   return (
@@ -24,6 +24,27 @@ export const Projetos = () => {
         </p>
       </div>
       <div className="flex flex-col gap-10 py-10 lg:flex-row lg:flex-wrap">
+        <div className="basis-1/4 p-4 flex-1 rounded-lg bg-white dark:bg-slate-800">
+          <ImageGallery items={projetoNlw2023} showFullscreenButton />
+          <h5 className="text-xl font-bold text-center pb-2 dark:text-yellow-600">Next Level Week 2023</h5>
+          <p className="text-md text-center py-1 px-4 leading-8 text-gray-700 dark:text-gray-400">
+            O propósito da aplicação é registrar as atividades(hábitos) e marcar num quadro, permitindo a visualização
+            fácil da quantidade de hábitos que foram realizados no dia
+            <a
+              href="https://github.com/gabrielJGS/nlw20231"
+              target="_blank"
+              rel="noreferrer"
+              className="text-blue-500 font-bold"
+            >
+              {" "}
+              Repositório
+            </a>
+          </p>
+          <div className="flex flex-wrap gap-10 justify-center">
+            <SiReact title="React" width={20} height={20} className="text-[40px] mx-auto text-blue-500 rounded-xl" />
+            <SiRealm title="Realm" width={20} height={20} className="text-[40px] mx-auto text-purple-800" />
+          </div>
+        </div>
         <div className="basis-1/4 p-4 flex-1 rounded-lg bg-white dark:bg-slate-800">
           <ImageGallery items={projetoRecordar} showFullscreenButton />
           <h5 className="text-xl font-bold text-center pb-2 dark:text-yellow-600">Recordar</h5>

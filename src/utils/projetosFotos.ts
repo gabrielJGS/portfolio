@@ -15,6 +15,10 @@ import recordar3 from "../../public/imgs/recordar/3.webp";
 import recordar4 from "../../public/imgs/recordar/4.webp";
 import recordar5 from "../../public/imgs/recordar/5.webp";
 
+import nlw1 from "../../public/imgs/nlw2023/1.jpg";
+import nlw2 from "../../public/imgs/nlw2023/2.jpg";
+import nlw3 from "../../public/imgs/nlw2023/3.jpg";
+
 export const projetoEsclarecaImgs = [
   {
     original: esclareca1.src,
@@ -61,5 +65,17 @@ export const projetoRecordar = [
   },
   {
     original: recordar5.src,
+  },
+];
+
+export const projetoNlw2023 = [
+  {
+    original: nlw1.src,
+  },
+  {
+    original: nlw2.src,
+  },
+  {
+    original: nlw3.src,
   },
 ];
