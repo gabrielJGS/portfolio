@@ -95,8 +95,8 @@ export const Projetos = () => {
             </a>
           </p>
           <div className="flex flex-wrap gap-10 justify-center">
-            <SiReact width={20} height={20} className="text-[40px] mx-auto text-blue-500 rounded-xl" />
-            <SiRealm width={20} height={20} className="text-[40px] mx-auto text-purple-800" />
+            <SiReact title="React" width={20} height={20} className="text-[40px] mx-auto text-blue-500 rounded-xl" />
+            <SiRealm title="Realm" width={20} height={20} className="text-[40px] mx-auto text-purple-800" />
           </div>
         </div>
         <div className="basis-1/4 p-4 flex-1 rounded-lg bg-white dark:bg-slate-800">
@@ -115,9 +115,9 @@ export const Projetos = () => {
             </a>
           </p>
           <div className="flex flex-wrap gap-10 justify-center">
-            <SiFlask width={20} height={20} className="text-[40px] mx-auto text-slate-600 rounded-xl" />
-            <SiPython width={20} height={20} className="text-[40px] mx-auto text-yellow-500" />
-            <SiJson width={20} height={20} className="text-[40px] mx-auto text-slate-600 rounded-xl" />
+            <SiFlask title="Flask" width={20} height={20} className="text-[40px] mx-auto text-slate-600 rounded-xl" />
+            <SiPython title="Python" width={20} height={20} className="text-[40px] mx-auto text-yellow-500" />
+            <SiJson title="Json" width={20} height={20} className="text-[40px] mx-auto text-slate-600 rounded-xl" />
           </div>
         </div>
         <div className="basis-1/4 p-4 flex-1 rounded-lg bg-white dark:bg-slate-800">
@@ -147,9 +147,14 @@ export const Projetos = () => {
             </a>
           </p>
           <div className="flex flex-wrap gap-10 justify-center">
-            <AiFillTwitterCircle width={20} height={20} className="text-[40px] mx-auto text-blue-600" />
-            <SiPython width={20} height={20} className="text-[40px] mx-auto text-yellow-500" />
-            <SiGoogletranslate width={20} height={20} className="text-[40px] mx-auto text-blue-500" />
+            <AiFillTwitterCircle title="Twitter" width={20} height={20} className="text-[40px] mx-auto text-blue-600" />
+            <SiPython title="Python" width={20} height={20} className="text-[40px] mx-auto text-yellow-500" />
+            <SiGoogletranslate
+              title="Googletranslate"
+              width={20}
+              height={20}
+              className="text-[40px] mx-auto text-blue-500"
+            />
           </div>
         </div>
         <div className="basis-1/4 p-4 flex-1 rounded-lg bg-white dark:bg-slate-800">
@@ -170,11 +175,26 @@ export const Projetos = () => {
             </a>
           </p>
           <div className="flex flex-wrap gap-10 justify-center">
-            <SiLinux width={20} height={20} className="text-[40px] mx-auto text-slate-500 rounded-xl" />
-            <SiAmazonaws width={20} height={20} className="text-[40px] mx-auto text-orange-500 rounded-xl" />
-            <DiNodejs width={20} height={20} className="text-[40px] mx-auto text-green-500 rounded-xl" />
-            <SiExpress width={20} height={20} className="text-[40px] mx-auto text-green-500 rounded-xl" />
-            <SiReact width={20} height={20} className="text-[40px] mx-auto text-blue-500 rounded-xl" />
+            <SiLinux title="Linux" width={20} height={20} className="text-[40px] mx-auto text-slate-500 rounded-xl" />
+            <SiAmazonaws
+              title="Amazon"
+              width={20}
+              height={20}
+              className="text-[40px] mx-auto text-orange-500 rounded-xl"
+            />
+            <DiNodejs
+              title="Node.js"
+              width={20}
+              height={20}
+              className="text-[40px] mx-auto text-green-500 rounded-xl"
+            />
+            <SiExpress
+              title="Express"
+              width={20}
+              height={20}
+              className="text-[40px] mx-auto text-green-500 rounded-xl"
+            />
+            <SiReact title="React" width={20} height={20} className="text-[40px] mx-auto text-blue-500 rounded-xl" />
           </div>
         </div>
       </div>
