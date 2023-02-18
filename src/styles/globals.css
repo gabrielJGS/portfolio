@@ -1,7 +1,6 @@
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
-
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
 
 html,
 body {
@@ -27,4 +26,12 @@ a {
 @font-face {
   font-family: "confortaa";
   src: url("../../public/Comfortaa.ttf");
+}
+
+.image-gallery-slide img {
+  max-height: 30rem !important;
+}
+
+.fullscreen .image-gallery-slide img {
+  max-height: calc(100vh - 80px)!important;
 }

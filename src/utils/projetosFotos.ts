@@ -1,3 +1,5 @@
+import noimage from "../../public/imgs/noimage.png";
+
 import esclareca1 from "../../public/imgs/esclareca/1.png";
 import esclareca2 from "../../public/imgs/esclareca/2.png";
 import esclareca3 from "../../public/imgs/esclareca/3.png";
@@ -77,5 +79,11 @@ export const projetoNlw2023 = [
   },
   {
     original: nlw3.src,
+  },
+];
+
+export const noImage = [
+  {
+    original: noimage.src,
   },
 ];
