@@ -3,10 +3,9 @@ import Image from "next/image";
 import logo from "../../public/logo.png";
 
 interface NavbarProps {
-  darkMode: boolean;
   changeDarkMode(): void;
 }
-export const Navbar = ({darkMode, changeDarkMode}: NavbarProps) => {
+export const Navbar = ({changeDarkMode}: NavbarProps) => {
   return (
     <>
       <nav className="w-full fixed px-10 py-2 flex justify-between bg-blue-800 z-50">
@@ -57,7 +56,7 @@ export const Navbar = ({darkMode, changeDarkMode}: NavbarProps) => {
         </ul>
       </nav>
       <div
-        className="w-full fixed z-40 shadow-2xl dark:drop-shadow-[0_1px_4px_#c0df14b2] bg-yellow-400 dark:bg-yellow-600"
+        className="w-full fixed z-40 shadow-2xl dark:drop-shadow-[0_1px_4px_#c1df147b] bg-yellow-400 dark:bg-yellow-600"
         style={{ height: "82px" }}
       ></div>
     </>

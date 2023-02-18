@@ -30,7 +30,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/fav.ico" />
       </Head>
-      <Navbar darkMode changeDarkMode={changeDarkMode} />
+      <Navbar changeDarkMode={changeDarkMode} />
       <main className="min-h-screen pt-12 px-10 md:px-20 lg:px-40 bg-slate-100 transition duration-500 dark:bg-gray-900">
         <Dados />
         <Competencias />
